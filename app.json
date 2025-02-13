@@ -1,0 +1,71 @@
+{
+  "expo": {
+    "name": "Wingman",
+    "slug": "wingman",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "entryPoint": "./app/entry.js",
+    "newArchEnabled": true,
+    "experiments": {
+      "tsconfigPaths": true
+    },
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#2A2A2A"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.wingman.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Permitir que Wingman acceda a tu ubicación para encontrar lugares cercanos"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#2A2A2A"
+      },
+      "package": "com.wingman.app",
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION"
+      ]
+    },
+    "scheme": "wingman",
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#2A2A2A",
+          "defaultSound": true
+        }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Permitir que Wingman use Face ID para autenticar reservas"
+        }
+      ],
+      "expo-secure-store"
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "your-project-id"
+      }
+    }
+  }
+}
